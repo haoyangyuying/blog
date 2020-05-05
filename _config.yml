@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: yanghaoyuying
+title: haoyangyuying
 subtitle: '一期一会'
 description: 'to be a better person'
 keywords: Blog
 author: Howard Yang
-language: en, zh-cn
+language: zh-cn
 timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com/
+url: https://haoo.netlify.app/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -49,8 +49,6 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
-  wrap: true
-  hljs: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -60,6 +58,8 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+  exclude:
+    - tag Hexo 
 
 # Category & Tag
 default_category: uncategorized
@@ -81,8 +81,8 @@ use_date_for_updated: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
+# per_page: 10
+# pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
@@ -98,4 +98,35 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: 'git'
+  repo: https://github.com/haoyangyuying/blog.git
+  branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# Local search
+local_search:
+  enable: true
+
+all_minifier: true
+
+fancybox: true
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+
+addlink:
+  before_text: __此文作者__：杨浩<br />__此文地址__：  
+  after_text: <br />__版权声明__：<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0</a>！
+
+sitemap: 
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
