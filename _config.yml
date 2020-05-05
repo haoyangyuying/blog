@@ -139,18 +139,23 @@ pwa:
   manifest:
     path: /manifest.json
     body:
-      name: haoo
-      short_name: haoo
+      "name": "haoo"
+      "short_name": "haoo"
+      "theme_color": "rgba(203,7,83,0.86)"
+      "background_color": "#FAFAFA"
+      "display": "standalone"
+      "Scope": "/"
+      "start_url": "/"
       icons:
-        - src: /images/android-chrome-192x192.png
-          sizes: 192x192
+        - src: https://haoo.netlify.app/images/avatar-144x144.png
+          sizes: 144x144
           type: image/png
-        - src: /images/android-chrome-512x512.png
-          sizes: 512x512
+        - src: https://haoo.netlify.app/images/avatar-128x128.png
+          sizes: 128x128
           type: image/png
-      theme_color: '#ffffff'
-      background_color: '#ffffff'
-      display: standalone
+        - src: https://haoo.netlify.app/images/avatar-96x96.png
+          sizes: 96x96
+          type: image/png
   serviceWorker:
     path: /sw.js
     preload:
