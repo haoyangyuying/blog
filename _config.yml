@@ -108,7 +108,6 @@ search:
   format: html
   limit: 10000
 
-# Local search
 local_search:
   enable: true
 
